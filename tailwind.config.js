@@ -14,7 +14,7 @@ module.exports = {
       },
       colors: {
         "background-blue": "#172C4A",
-        "primary-red": "#AE262E",
+        "primary-red": "#FF000F",
       },
     },
   },

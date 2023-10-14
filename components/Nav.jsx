@@ -1,13 +1,17 @@
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
 const NavBar = () => {
   return (
     <>
-      <div className="navbar bg-background-blue text-white z-10 fixed">
+      <div
+        className="navbar bg-white z-10 fixed"
+        style={{ minHeight: "5rem", paddingRight: "2rem" }}
+      >
         <div className="navbar-start">
           <div className="dropdown">
-            <label tabIndex={0} className="btn btn-ghost lg:hidden text-white">
+            <label tabIndex={0} className="btn btn-ghost lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
@@ -25,77 +29,76 @@ const NavBar = () => {
             </label>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow rounded-none w-52 h-96 bg-background-blue"
+              className="menu menu-sm dropdown-content rounded-xl mt-3 z-[1] p-2 shadow w-52 h-96 bg-background-blue text-white"
             >
               <li>
-                <a className="hover:text-white hover:bg-primary-red rounded-none">
-                  Home
-                </a>
+                <Link href="/">Home</Link>
               </li>
               <li>
                 <a>Menu</a>
                 <ul className="p-2">
                   <li>
-                    <a className="hover:text-white hover:bg-primary-red rounded-none">
-                      Pizza
-                    </a>
+                    <Link href="/">Unlimited Pizza</Link>
                   </li>
                   <li>
-                    <a className="hover:text-white hover:bg-primary-red rounded-none">
-                      Salad
-                    </a>
+                    <Link href="/">Pizza</Link>
+                  </li>
+                  <li>
+                    <Link href="/">Salad</Link>
                   </li>
                 </ul>
               </li>
               <li>
-                <a className="hover:text-white hover:bg-primary-red rounded-none">
-                  About us
-                </a>
+                <Link href="/">Contact us</Link>
+              </li>
+              <li>
+                <Link href="/">About us</Link>
               </li>
             </ul>
           </div>
-          <Link
-            href="/"
-            className="btn btn-ghost text-white text-xl sm:text-2xl md:text-2xl lg:text-2xl xl:text-3xl"
-          >
-            TORNITTO'S PIZAA
-          </Link>
+          <div className="btn btn-ghost mb-6 hover:bg-white text-background-blue text-2xl sm:text-3xl md:text-3xl lg:text-3xl xl:text-4xl lg:mb-6">
+            <Image
+              src={"/assets/images/logo.png"}
+              width={70}
+              height={70}
+              alt="TornittosLogo"
+              className="object-contain md:w-15 md:h-15"
+            />
+            <Link href="/" className="sm:flex font-bold hidden mt-1">
+              TORNITTO'S PIZAA
+            </Link>
+          </div>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 ">
             <li>
-              <a className="hover:text-white hover:bg-primary-red rounded-none text-xl">
-                Home
-              </a>
+              <a className=" hover:bg-white  text-xl">Home</a>
             </li>
             <li tabIndex={0}>
               <details className="text-xl">
-                <summary className="hover:text-white active:bg-primary-red hover:bg-primary-red rounded-none">
+                <summary className=" active:bg-primary-red hover:bg-white ml-3">
                   Menu
                 </summary>
-                <ul className="text-white bg-primary-red rounded-none z-10 w-96">
+                <ul className="text-background-blue drop-shadow-xl bg-white  z-10 w-96">
                   <li>
-                    <a className="hover:text-white hover:bg-background-blue rounded-none">
-                      Pizza
-                    </a>
+                    <Link href="/">Unlimited Pizza</Link>
                   </li>
                   <li>
-                    <a className="hover:text-white hover:bg-background-blue rounded-none">
-                      Salad
-                    </a>
+                    <Link href="/">Pizza</Link>
+                  </li>
+                  <li>
+                    <Link href="/">Salad</Link>
                   </li>
                 </ul>
               </details>
             </li>
             <li>
-              <a className="hover:text-white hover:bg-primary-red rounded-none text-xl">
-                About us
-              </a>
+              <a className=" hover:bg-white  text-xl ml-3">About us</a>
             </li>
           </ul>
         </div>
         <div className="navbar-end">
-          <a className="btn_primary">Dine in</a>
+          <a className="btn btn_primary">Dine in</a>
         </div>
       </div>
     </>

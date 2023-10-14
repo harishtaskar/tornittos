@@ -42,5 +42,9 @@
   }
 
   .btn_primary{
-    @apply sm:btn sm:btn-sm sm:text-white sm:btn-primary sm:bg-primary-red sm:rounded-none md:text-white md:btn-primary md:bg-primary-red md:rounded-none lg:btn lg:bg-primary-red lg:rounded-none bg-primary-red border-none lg:text-white text-white hover:bg-red-600 rounded-none btn-sm text-lg
+    @apply rounded-lg sm:btn sm:btn-sm sm:text-white sm:btn-primary sm:bg-primary-red  md:text-white md:btn-primary md:bg-primary-red  lg:btn lg:bg-primary-red  bg-primary-red border-none lg:text-white text-white hover:bg-red-600  btn-sm text-xl
+  }
+
+  .hero_content{
+    @apply flex justify-start gap-3 p-10
   }
