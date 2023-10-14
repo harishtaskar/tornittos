@@ -1,0 +1,46 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Gabarito:wght@400;500;600&family=Oswald:wght@400;500;600;700&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  font-family: 'Gabarito', sans-serif;
+}
+
+.main {
+    width: 100vw;
+    min-height: 100vh;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    pointer-events: none;
+    font-size: 2rem;
+  }
+  
+  .main:before {
+    position: absolute;
+    content: "";
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    top: 0;
+  }
+  
+  .main:after {
+    content: "";
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    opacity: 0.4;
+    filter: invert(1);
+  }
+
+  .btn_primary{
+    @apply sm:btn sm:btn-sm sm:text-white sm:btn-primary sm:bg-primary-red sm:rounded-none md:text-white md:btn-primary md:bg-primary-red md:rounded-none lg:btn lg:bg-primary-red lg:rounded-none bg-primary-red border-none lg:text-white text-white hover:bg-red-600 rounded-none btn-sm text-lg
+  }
