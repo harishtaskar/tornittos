@@ -5,7 +5,7 @@ import HeaderText from "../HeaderText";
 
 const NewOffersList = () => {
   return (
-    <div className="main">
+    <div className="main bg-white mt-10">
       <div className="mainContent">
         <HeaderText text="Deals and Offers" />
         <div className="carousel w-full gap-5">

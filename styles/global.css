@@ -9,7 +9,7 @@
 }
 
 :root {
-  @apply bg-base-100;
+  @apply bg-white;
 }
 
 .mainContent {

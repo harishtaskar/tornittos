@@ -14,10 +14,10 @@ const HeroSection = () => {
           <h1 className="mb-5 text-4xl mt-12 md:text-6xl lg:text-7xl font-bold text-white">
             the party can't start without pizza.
           </h1>
-          <p className="mb-5 text-lg lg:text-xl">
-            Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-            excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
-            a id nisi.
+          <p className="mb-5 text-base-300 text-lg lg:text-xl">
+            It is made with different toppings. Some of the most common toppings
+            are cheese, sausages, pepperoni, vegetables, tomatoes, spices and
+            herbs and basil.
           </p>
           <div className="flex gap-4">
             <button className="btn btn_primary cursor-pointer">
