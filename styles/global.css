@@ -8,6 +8,10 @@
   font-family: "Gabarito", sans-serif;
 }
 
+:root {
+  @apply bg-base-100;
+}
+
 .mainContent {
   width: 90vw;
   display: flex;

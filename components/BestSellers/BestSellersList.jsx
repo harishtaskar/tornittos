@@ -1,11 +1,10 @@
 import React from "react";
 import BestSellerCard from "./BestSellerCard";
 import HeaderText from "../HeaderText";
-import NewOffersList from "../DealsAndOffers/NewOffersList";
 
 const BestSellersList = () => {
   return (
-    <div className="flex-col items-center justify-center w-[100vw] bg-slate-300 py-2 mt-10">
+    <div className="flex-col items-center justify-center w-[100vw] bg-slate-300 py-10 mt-10 mb-20">
       <div className="main">
         <div className="mainContent">
           <HeaderText text="Best Sellers" />

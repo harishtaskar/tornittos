@@ -3,7 +3,7 @@ import React from "react";
 
 const BestSellerCard = ({ title, subtitle }) => {
   return (
-    <div className="card w-60 rounded-lg lg:rounded-xl sm:w-64 md:w-72 lg:w-80 bg-base-100">
+    <div className="card w-60 scroll-auto rounded-lg lg:rounded-xl sm:w-64 md:w-72 lg:w-80 bg-base-100">
       <figure>
         <Image
           src="/assets/mainBackground.png"
