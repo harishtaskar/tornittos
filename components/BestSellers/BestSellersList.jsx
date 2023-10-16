@@ -1,17 +1,29 @@
-import React from "react";
+"use client";
+import React, { useEffect } from "react";
 import BestSellerCard from "./BestSellerCard";
 import HeaderText from "../HeaderText";
 
 const BestSellersList = () => {
+  // useEffect(() => {
+  //   const scrollInterval = setInterval(() => {
+  //     window.scrollBy({
+  //       left: 400, // You can adjust the scroll distance as needed
+  //       behavior: "smooth",
+  //     });
+  //   }, 2000); // Scroll every 2 seconds (2000 milliseconds)
+
+  //   return () => clearInterval(scrollInterval); // Clean up the interval on component unmount
+  // }, []);
+
   return (
-    <div className="flex-col items-center justify-center w-[100vw] bg-slate-300 py-10 mt-10 mb-20">
-      <div className="main">
-        <div className="mainContent">
+    <div className="flex-col items-center justify-center w-[100vw] bg-slate-300 py-10 my-10">
+      <div className="flex items-center justify-center">
+        <div className="mainContent pl-5">
           <HeaderText text="Best Sellers" />
           <div className="carousel w-full gap-5">
             <div id="item1" className="carousel-item">
               <BestSellerCard
-                title={"Double Cheez with slice"}
+                title={"Double Cheez"}
                 subtitle={
                   "Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi."
                 }

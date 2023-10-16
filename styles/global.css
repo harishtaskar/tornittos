@@ -13,7 +13,7 @@
 }
 
 .mainContent {
-  width: 90vw;
+  width: 100vw;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -21,7 +21,7 @@
 }
 
 .mainContent {
-  @apply lg:w-[80vw] md:w-[85vw];
+  @apply sm:w-[90vw] lg:w-[80vw] md:w-[85vw];
 }
 
 .main {
@@ -60,4 +60,8 @@
 
 .hero_content {
   @apply flex justify-start gap-3 p-10;
+}
+
+.posterImages{
+  @apply w-[14rem] h-[20rem] sm:w-[20rem] sm:h-[30rem] md:w-[22rem] md:h-[32rem] lg:w-[32rem] lg:h-[45rem]
 }

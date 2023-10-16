@@ -2,6 +2,7 @@ import React from "react";
 import "../styles/global.css";
 import NavBar from "../components/Nav";
 import Provider from "../components/Provider";
+import Footer from "@/components/Footer/Footer.jsx";
 
 export const metadata = {
   title: "TORNITTO'S PIZZA",
@@ -16,6 +17,7 @@ const RootLayout = ({ children }) => {
           <div>
             <NavBar />
             {children}
+            <Footer />
           </div>
         </Provider>
       </body>

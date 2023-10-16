@@ -5,8 +5,8 @@ import HeaderText from "../HeaderText";
 
 const NewOffersList = () => {
   return (
-    <div className="main bg-white mt-10">
-      <div className="mainContent">
+    <div className="flex items-center justify-center bg-white mt-10">
+      <div className="mainContent pl-5">
         <HeaderText text="Deals and Offers" />
         <div className="carousel w-full gap-5">
           <div id="item1" className="carousel-item ">
