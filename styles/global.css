@@ -1,50 +1,59 @@
-
 @import url("https://fonts.googleapis.com/css2?family=Gabarito:wght@400;500;600&family=Oswald:wght@400;500;600;700&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root{
-  font-family: 'Gabarito', sans-serif;
+:root {
+  font-family: "Gabarito", sans-serif;
+}
+
+.mainContent {
+  width: 90vw;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.mainContent {
+  @apply lg:w-[80vw] md:w-[85vw];
 }
 
 .main {
-    width: 100vw;
-    min-height: 100vh;
-    position: fixed;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: flex-start;
-    pointer-events: none;
-    font-size: 2rem;
-  }
-  
-  .main:before {
-    position: absolute;
-    content: "";
-    z-index: 2;
-    width: 100%;
-    height: 100%;
-    top: 0;
-  }
-  
-  .main:after {
-    content: "";
-    z-index: 1;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    opacity: 0.4;
-    filter: invert(1);
-  }
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  pointer-events: none;
+  font-size: 2rem;
+}
 
-  .btn_primary{
-    @apply rounded-lg sm:btn sm:btn-sm sm:text-white sm:btn-primary sm:bg-primary-red  md:text-white md:btn-primary md:bg-primary-red  lg:btn lg:bg-primary-red  bg-primary-red border-none lg:text-white text-white hover:bg-red-600  btn-sm text-xl
-  }
+.main:before {
+  position: absolute;
+  content: "";
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
 
-  .hero_content{
-    @apply flex justify-start gap-3 p-10
-  }
+.main:after {
+  content: "";
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  opacity: 0.4;
+  filter: invert(1);
+}
+
+.btn_primary {
+  @apply rounded-lg sm:btn sm:btn-sm sm:text-white sm:btn-primary sm:bg-primary-red  md:text-white md:btn-primary md:bg-primary-red  lg:btn lg:bg-primary-red  bg-primary-red border-none lg:text-white text-white hover:bg-red-600  btn-sm text-xl;
+}
+
+.hero_content {
+  @apply flex justify-start gap-3 p-10;
+}

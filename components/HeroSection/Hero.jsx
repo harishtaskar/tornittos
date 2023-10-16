@@ -8,7 +8,7 @@ const HeroSection = () => {
         backgroundImage: 'url("/assets/mainBackground3.png")',
       }}
     >
-      <div className="hero-overlay bg-opacity-5"></div>
+      <div className="hero-overlay bg-opacity-20"></div>
       <div className="hero_content text-start text-neutral-content align-mi">
         <div className="max-w-2xl ml-2 mb-14 mt-24 lg:mt-60 lg:ml-20 lg:mb-32 ">
           <h1 className="mb-5 text-4xl mt-12 md:text-6xl lg:text-7xl font-bold text-white">
