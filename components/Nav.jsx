@@ -6,8 +6,8 @@ const NavBar = () => {
   return (
     <>
       <div
-        className="navbar bg-white z-10 fixed"
-        style={{ minHeight: "5rem", paddingRight: "2rem" }}
+        className="navbar bg-white z-10 fixed pr-8"
+        style={{ minHeight: "4rem", minWidth: "100vw" }}
       >
         <div className="navbar-start">
           <div className="dropdown">

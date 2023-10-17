@@ -16,9 +16,9 @@ const BestSellersList = () => {
   // }, []);
 
   return (
-    <div className="flex-col items-center justify-center w-[100vw] bg-slate-300 py-10 my-10">
+    <div className="flex-col items-center justify-center w-full bg-slate-300 py-10 my-10">
       <div className="flex items-center justify-center">
-        <div className="mainContent pl-5">
+        <div className="mainContent pl-5 sm:pl-0 md:pl-0 lg:pl-0 xl:pl-0">
           <HeaderText text="Best Sellers" />
           <div className="carousel w-full gap-5">
             <div id="item1" className="carousel-item">

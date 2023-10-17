@@ -3,13 +3,13 @@ import React from "react";
 
 const BestSellerCard = ({ title, subtitle }) => {
   return (
-    <div className="card w-60 scroll-auto rounded-lg lg:rounded-xl sm:w-64 md:w-72 lg:w-80 bg-base-100">
+    <div className="card bg-white w-60 scroll-auto rounded-lg lg:rounded-xl sm:w-64 md:w-72 lg:w-80">
       <figure>
         <Image
           src="/assets/images/pizza2.jpg"
           alt="Image"
-          width={300}
-          height={300}
+          width={400}
+          height={400}
         />
       </figure>
       <div className="card-body p-4 md:p-5 lg:p-6">

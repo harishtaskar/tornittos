@@ -55,7 +55,7 @@
 }
 
 .btn_primary {
-  @apply rounded-lg sm:btn sm:btn-sm sm:text-white sm:btn-primary sm:bg-primary-red  md:text-white md:btn-primary md:bg-primary-red  lg:btn lg:bg-primary-red  bg-primary-red border-none lg:text-white text-white hover:bg-red-600  btn-sm text-xl;
+  @apply rounded-md xl:rounded-md font-thin sm:btn sm:btn-sm sm:text-white sm:btn-primary sm:bg-primary-red  md:text-white md:btn-primary md:bg-primary-red  lg:btn lg:bg-primary-red  bg-primary-red border-none lg:text-white text-white hover:bg-red-600  btn-sm text-xl;
 }
 
 .hero_content {
@@ -64,4 +64,12 @@
 
 .posterImages {
   @apply w-[16rem] h-[12rem] sm:w-[20rem] sm:h-[16rem] md:w-[24rem] md:h-[20rem] lg:w-[30rem] lg:h-[24rem];
+}
+
+.headerTitle {
+  @apply footer-title text-gray-950 font-bold tracking-widest text-2xl mb-0 mt-8 lg:mt-0 md:mt-0;
+}
+
+.headerTexts {
+  @apply link link-hover text-black text-lg;
 }

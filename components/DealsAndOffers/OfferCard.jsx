@@ -5,8 +5,7 @@ const OfferCard = ({ name, cardClickHandler }) => {
     <div
       className="card rounded-lg lg:rounded-xl w-64 sm:w-72 md:w-80 lg:w-96 text-primary-content cursor-pointer"
       style={{
-        background:
-          "url('/assets/images/offer.png') no-repeat center center/cover fixed",
+        backgroundImage: "url('/assets/images/offer1.png')",
       }}
       onClick={cardClickHandler}
     >
