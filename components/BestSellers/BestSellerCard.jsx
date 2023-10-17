@@ -6,7 +6,7 @@ const BestSellerCard = ({ title, subtitle }) => {
     <div className="card w-60 scroll-auto rounded-lg lg:rounded-xl sm:w-64 md:w-72 lg:w-80 bg-base-100">
       <figure>
         <Image
-          src="/assets/mainBackground.png"
+          src="/assets/images/pizza2.jpg"
           alt="Image"
           width={300}
           height={300}

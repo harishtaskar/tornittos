@@ -1,44 +1,56 @@
-import Image from "next/image";
-import React from "react";
+"use client";
+import React, { useRef } from "react";
+
+const Images = [
+  "pizza1.jpg",
+  "pizza2.jpg",
+  "pizza3.jpg",
+  "pizza4.jpg",
+  "pizza1.jpg",
+  "pizza2.jpg",
+  "pizza3.jpg",
+  "pizza4.jpg",
+  "pizza1.jpg",
+  "pizza2.jpg",
+  "pizza3.jpg",
+  "pizza4.jpg",
+];
 
 const Posters = () => {
+  const scrollContainerRef = useRef(null);
+
+  const handleScroll = () => {
+    const container = scrollContainerRef.current;
+    if (container) {
+      if (
+        container.scrollLeft + container.offsetWidth >=
+        container.scrollWidth
+      ) {
+        container.scrollLeft = 0;
+      } else {
+        container.scrollLeft += 1;
+      }
+    }
+  };
+
+  setInterval(handleScroll, 50);
+
   return (
-    <div className="carousel mb-10 ">
-      <div className="carousel-item">
-        <img
-          src="/assets/images/offer.png"
-          alt="Burger"
-          className="posterImages"
-        />
-      </div>
-      <div className="carousel-item">
-        <img
-          src="/assets/images/offer2.png"
-          alt="Burger"
-          className="posterImages"
-        />
-      </div>
-      <div className="carousel-item">
-        <img
-          src="/assets/images/offer3.png"
-          alt="Burger"
-          className="posterImages"
-        />
-      </div>
-      <div className="carousel-item">
-        <img
-          src="/assets/images/offer.png"
-          alt="Burger"
-          className="posterImages"
-        />
-      </div>
-      <div className="carousel-item">
-        <img
-          src="/assets/images/offer2.png"
-          alt="Burger"
-          className="posterImages"
-        />
-      </div>
+    <div
+      className="flex w-full overflow-x-auto  whitespace-nowrap mb-10 "
+      ref={scrollContainerRef}
+    >
+      {Images.map((image, index) => {
+        return (
+          <div className="carousel-item flex-0" key={index}>
+            <img
+              src={`/assets/images/${image}`}
+              alt="Burger"
+              className="posterImages"
+            />
+          </div>
+        );
+      })}
     </div>
   );
 };

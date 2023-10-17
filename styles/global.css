@@ -62,6 +62,6 @@
   @apply flex justify-start gap-3 p-10;
 }
 
-.posterImages{
-  @apply w-[14rem] h-[20rem] sm:w-[20rem] sm:h-[30rem] md:w-[22rem] md:h-[32rem] lg:w-[32rem] lg:h-[45rem]
+.posterImages {
+  @apply w-[16rem] h-[12rem] sm:w-[20rem] sm:h-[16rem] md:w-[24rem] md:h-[20rem] lg:w-[30rem] lg:h-[24rem];
 }

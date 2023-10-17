@@ -4,7 +4,10 @@ const OfferCard = ({ name, cardClickHandler }) => {
   return (
     <div
       className="card rounded-lg lg:rounded-xl w-64 sm:w-72 md:w-80 lg:w-96 text-primary-content cursor-pointer"
-      style={{ backgroundImage: "url(/assets/background.png)" }}
+      style={{
+        background:
+          "url('/assets/images/offer.png') no-repeat center center/cover fixed",
+      }}
       onClick={cardClickHandler}
     >
       <div className="card-body text-white">

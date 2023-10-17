@@ -5,7 +5,7 @@ const HeroSection = () => {
     <div
       className="hero place-items-start min-h-26 z-9"
       style={{
-        backgroundImage: 'url("/assets/mainBackground3.png")',
+        backgroundImage: 'url("/assets/background/mainBackground3.png")',
       }}
     >
       <div className="hero-overlay bg-opacity-20"></div>
@@ -14,7 +14,7 @@ const HeroSection = () => {
           <h1 className="mb-5 text-4xl mt-12 md:text-6xl lg:text-7xl font-bold text-white">
             the party can't start without pizza.
           </h1>
-          <p className="mb-5 text-base-300 text-lg lg:text-xl">
+          <p className="mb-5 text-gray-200 text-lg lg:text-xl">
             It is made with different toppings. Some of the most common toppings
             are cheese, sausages, pepperoni, vegetables, tomatoes, spices and
             herbs and basil.
