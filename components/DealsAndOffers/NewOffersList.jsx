@@ -10,22 +10,25 @@ const NewOffersList = () => {
         <HeaderText text="Deals and Offers" />
         <div className="carousel w-full gap-5">
           <div id="item1" className="carousel-item ">
-            <OfferCard name={"first"} />
+            <OfferCard name={"Every Mondays and Saturdays"} offer={"50% OFF"} />
           </div>
           <div id="item2" className="carousel-item">
-            <OfferCard name={"Second"} />
+            <OfferCard name={"Dine in"} offer={"20% OFF"} />
           </div>
           <div id="item3" className="carousel-item">
-            <OfferCard name={"Third"} />
+            <OfferCard name={"Navratri Offer"} offer={"30% OFF"} />
           </div>
           <div id="item4" className="carousel-item">
-            <OfferCard name={"Forth"} />
+            <OfferCard name={"Every First Friday of Month"} offer={"20% OFF"} />
           </div>
           <div id="item4" className="carousel-item">
-            <OfferCard name={"Forth"} />
+            <OfferCard name={"On Weekends"} offer={"10% OFF"} />
           </div>
           <div id="item4" className="carousel-item">
-            <OfferCard name={"Forth"} />
+            <OfferCard
+              name={"On Parties and Get to Gethers"}
+              offer={"25% OFF"}
+            />
           </div>
         </div>
       </div>

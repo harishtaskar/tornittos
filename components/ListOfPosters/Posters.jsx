@@ -37,7 +37,7 @@ const Posters = () => {
 
   return (
     <div
-      className="flex w-full overflow-x-auto  whitespace-nowrap mb-10 "
+      className="flex w-full overflow-x-auto  whitespace-nowrap my-10 "
       ref={scrollContainerRef}
     >
       {Images.map((image, index) => {

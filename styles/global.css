@@ -67,9 +67,29 @@
 }
 
 .headerTitle {
-  @apply footer-title text-gray-950 font-bold tracking-widest text-2xl mb-0 mt-8 lg:mt-0 md:mt-0;
+  @apply footer-title text-white opacity-100 font-bold underline-offset-4 md:mb-2 md:text-base capitalize lg:underline leading-4 text-xl mb-1 mt-2 lg:mt-0 md:mt-0;
 }
 
 .headerTexts {
-  @apply link link-hover text-black text-lg;
+  @apply link link-hover text-base-100 text-sm sm:text-base md:text-base lg:text-lg;
+}
+
+.testimonial_card {
+  @apply flex-1 break-inside-avoid rounded-lg border  border-gray-300 bg-white/20 bg-clip-padding w-[240px] p-4 md:p-6 lg:p-6  pb-4 backdrop-blur-lg backdrop-filter  md:w-[360px] sm:w-[240px] sm:p-4  h-fit;
+}
+
+.flex-center {
+  @apply flex justify-center items-center;
+}
+
+.flex-start {
+  @apply flex justify-start items-start;
+}
+
+.flex-end {
+  @apply flex justify-end items-center;
+}
+
+.flex-between {
+  @apply flex justify-between items-center;
 }
