@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/global.css";
-import NavBar from "../components/Nav";
+import NavBar from "../components/NavBar/Nav";
 import Provider from "../components/Provider";
 import Footer from "@/components/Footer/Footer.jsx";
 

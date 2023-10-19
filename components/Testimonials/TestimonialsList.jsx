@@ -49,7 +49,7 @@ const Testimonials = [
 
 const TestimonialsList = () => {
   return (
-    <div className="flex-row items-center justify-center w-full mb-10">
+    <div className="flex-row items-center justify-center w-full mt-5">
       <div className="flex items-center justify-center">
         <div className="mainContent pl-5 sm:pl-0 md:pl-0 lg:pl-0 xl:pl-0">
           <HeaderText text="Testimonials" />

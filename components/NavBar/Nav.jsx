@@ -2,6 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import MenuIcon from "@mui/icons-material/Menu";
+import DineInButton from "./DineInButton";
+import { signIn } from "next-auth/react";
 
 const NavBar = () => {
   return (
@@ -10,7 +12,7 @@ const NavBar = () => {
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost px-[0.5rem] lg:hidden">
-              <MenuIcon />
+              <MenuIcon className="text-background-blue" />
             </label>
             <ul
               tabIndex={0}
@@ -41,7 +43,7 @@ const NavBar = () => {
               </li>
             </ul>
           </div>
-          <div className="btn btn-ghost hover:bg-white text-background-blue px-0 lg:px-5 text-[1.75rem] sm:text-3xl md:text-3xl lg:text-3xl xl:text-4xl">
+          <div className="btn btn-ghost hover:bg-transparent text-background-blue px-0 lg:px-5 text-[1.75rem] sm:text-3xl md:text-3xl lg:text-3xl xl:text-4xl">
             <Image
               src={"/assets/images/logo.png"}
               width={70}
@@ -89,7 +91,7 @@ const NavBar = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <a className="btn btn_primary">Dine in</a>
+          <DineInButton />
         </div>
       </div>
     </>

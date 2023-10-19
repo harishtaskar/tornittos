@@ -8,7 +8,7 @@ import YouTubeIcon from "@mui/icons-material/YouTube";
 
 const Footer = () => {
   return (
-    <footer className="footer flex justify-center items-center p-5 sm:p-8 md:p-10 lg:p-10 sm:px-14 md:px-16 lg:32 bg-background-blue text-base-content">
+    <footer className="footer flex justify-center items-center p-5 mt-5 sm:p-8 md:p-10 lg:p-10 sm:px-14 md:px-16 lg:32 bg-background-blue text-base-content">
       <div className="flex flex-col gap-6 justify-center items-center text-center md:flex-row md:justify-between md:gap-16 md:items-center md:w-[80vw] sm:gap-8 lg:gap-28">
         <aside>
           <Image
@@ -25,7 +25,7 @@ const Footer = () => {
           </p>
         </aside>
         <div className="flex flex-col gap-5 sm:flex-row sm:justify-between sm:w-[90vw] justify-between md:flex-row md:gap-4 md:items-start lg:items-start">
-          <p className="hidden md:flex lg:flex text-white font-extralight sm:text-sm w-4/12 text-start">
+          <p className="hidden md:flex lg:flex text-white font-extralight sm:text-sm w-4/12 text-start ">
             Pizza is an Italian food that was created in Italy (The Naples
             area). It is made with different toppings. Some of the most common
             toppings are cheese, sausages, pepperoni, vegetables, tomatoes,
