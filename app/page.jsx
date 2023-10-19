@@ -4,6 +4,7 @@ import React from "react";
 import BestSellersList from "@/components/BestSellers/BestSellersList";
 import Posters from "@/components/ListOfPosters/Posters";
 import TestimonialsList from "@/components/Testimonials/TestimonialsList";
+import OurStory from "@/components/OurStory/OurStory";
 
 export const metadata = {
   title: "TORNITTO'S PIZZA",
@@ -17,6 +18,7 @@ const HomePage = () => {
       <NewOffersList />
       {/* <Posters /> */}
       <BestSellersList />
+      <OurStory />
       <TestimonialsList />
     </>
   );
