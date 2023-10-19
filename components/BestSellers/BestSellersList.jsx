@@ -1,66 +1,72 @@
 "use client";
-import React, { useEffect } from "react";
+import React, { useRef } from "react";
 import BestSellerCard from "./BestSellerCard";
 import HeaderText from "../HeaderText";
+import InfiniteScroll from "react-infinite-scroller";
+
+const BestSeller = [
+  {
+    title: "Double Cheez",
+    subtitle:
+      "Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi.",
+  },
+  {
+    title: "Double Secound",
+    subtitle:
+      "Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi.",
+  },
+  {
+    title: "Third Cheez",
+    subtitle:
+      "Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi.",
+  },
+  {
+    title: "Forth Cheez",
+    subtitle:
+      "Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi.",
+  },
+  {
+    title: "Sixth Cheez",
+    subtitle:
+      "Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi.",
+  },
+  {
+    title: "This five Cheez",
+    subtitle:
+      "Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi.",
+  },
+  {
+    title: "Seven Cheez",
+    subtitle:
+      "Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi.",
+  },
+];
 
 const BestSellersList = () => {
-  // useEffect(() => {
-  //   const scrollInterval = setInterval(() => {
-  //     window.scrollBy({
-  //       left: 400, // You can adjust the scroll distance as needed
-  //       behavior: "smooth",
-  //     });
-  //   }, 2000); // Scroll every 2 seconds (2000 milliseconds)
+  const scrollContainerRef = useRef(null);
 
-  //   return () => clearInterval(scrollInterval); // Clean up the interval on component unmount
-  // }, []);
+  const container = scrollContainerRef.current;
+  if (container) {
+    if (container.scrollLeft + container.offsetWidth >= container.scrollWidth) {
+      container.scrollLeft = 0;
+    } else {
+      container.scrollLeft += 1;
+    }
+  }
 
   return (
     <div className="flex-col items-center justify-center w-full bg-slate-100 py-10 my-10">
       <div className="flex items-center justify-center">
-        <div className="mainContent px-5 sm:pl-0 md:pl-0 lg:pl-0 xl:pl-0">
+        <div className="mainContent pl-5 sm:pl-0 md:pl-0 lg:pl-0 xl:pl-0">
           <HeaderText text="Best Sellers" />
-          <div className="carousel w-full gap-5">
-            <div id="item1" className="carousel-item">
-              <BestSellerCard
-                title={"Double Cheez"}
-                subtitle={
-                  "Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi."
-                }
-              />
-            </div>
-            <div id="item2" className="carousel-item">
-              <BestSellerCard
-                title={"Second"}
-                subtitle={
-                  "Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi."
-                }
-              />
-            </div>
-            <div id="item3" className="carousel-item">
-              <BestSellerCard
-                title={"Third"}
-                subtitle={
-                  "Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi."
-                }
-              />
-            </div>
-            <div id="item4" className="carousel-item">
-              <BestSellerCard
-                title={"Forth"}
-                subtitle={
-                  "Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi."
-                }
-              />
-            </div>
-            <div id="item4" className="carousel-item">
-              <BestSellerCard
-                title={"Forth"}
-                subtitle={
-                  "Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi."
-                }
-              />
-            </div>
+          <div className="carousel w-full" ref={scrollContainerRef}>
+            {BestSeller.map((item, index) => {
+              return (
+                <div id="item1" className="carousel-item mr-5" key={index}>
+                  <BestSellerCard title={item.title} subtitle={item.subtitle} />
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>

@@ -55,7 +55,7 @@
 }
 
 .btn_primary {
-  @apply rounded-md xl:rounded-md font-thin sm:btn sm:btn-sm sm:text-white sm:btn-primary sm:bg-primary-red  md:text-white md:btn-primary md:bg-primary-red  lg:btn lg:bg-primary-red  bg-primary-red border-none lg:text-white text-white hover:bg-red-600  btn-sm text-xl;
+  @apply rounded-md xl:rounded-md text-sm btn-md font-thin sm:btn sm:btn-sm sm:text-white sm:btn-primary sm:bg-primary-red  md:text-white md:btn-primary md:bg-primary-red  lg:btn lg:bg-primary-red  bg-primary-red border-none lg:text-white text-white hover:bg-red-600;
 }
 
 .hero_content {
@@ -71,7 +71,7 @@
 }
 
 .headerTexts {
-  @apply link link-hover text-base-100 text-sm sm:text-base md:text-base lg:text-lg;
+  @apply link link-hover text-white text-sm sm:text-base md:text-base lg:text-lg;
 }
 
 .testimonial_card {

@@ -1,31 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import MenuIcon from "@mui/icons-material/Menu";
 
 const NavBar = () => {
   return (
     <>
-      <div
-        className="navbar bg-white z-10 fixed pr-8"
-        style={{ minHeight: "4rem", minWidth: "100vw" }}
-      >
+      <div className="navbar bg-white bg-opacity-80 backdrop-blur backgr z-10 fixed pr-8 h-[4.5rem] sm:h-[5rem] md:h-[5.2rem] lg:h-[5.2rem] xl:h-[5.4rem] min-w-full">
         <div className="navbar-start">
           <div className="dropdown">
-            <label tabIndex={0} className="btn btn-ghost lg:hidden">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h8m-8 6h16"
-                />
-              </svg>
+            <label tabIndex={0} className="btn btn-ghost px-[0.5rem] lg:hidden">
+              <MenuIcon />
             </label>
             <ul
               tabIndex={0}
@@ -56,16 +41,22 @@ const NavBar = () => {
               </li>
             </ul>
           </div>
-          <div className="btn btn-ghost mb-6 hover:bg-white text-background-blue text-2xl sm:text-3xl md:text-3xl lg:text-3xl xl:text-4xl lg:mb-6">
+          <div className="btn btn-ghost hover:bg-white text-background-blue px-0 lg:px-5 text-[1.75rem] sm:text-3xl md:text-3xl lg:text-3xl xl:text-4xl">
             <Image
               src={"/assets/images/logo.png"}
               width={70}
               height={70}
               alt="TornittosLogo"
-              className="object-contain md:w-15 md:h-15"
+              className="object-contain hidden md:grid md:w-12 md:h-12 lg:w-15 lg:h-15"
             />
-            <Link href="/" className="sm:flex font-bold hidden mt-1">
-              TORNITTO'S PIZAA
+            <Link
+              href="/"
+              className="sm:flex md:flex lg:flex font-bold flex mt-1"
+            >
+              TORNITTO'S
+              <span className="hidden sm:grid md:grid lg:grid xl:grid ml-[0.5rem]">
+                PIZZA
+              </span>
             </Link>
           </div>
         </div>

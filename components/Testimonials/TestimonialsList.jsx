@@ -53,10 +53,10 @@ const TestimonialsList = () => {
       <div className="flex items-center justify-center">
         <div className="mainContent pl-5 sm:pl-0 md:pl-0 lg:pl-0 xl:pl-0">
           <HeaderText text="Testimonials" />
-          <div className="carousel w-full gap-4">
+          <div className="carousel w-full">
             {Testimonials.map((testimonial) => {
               return (
-                <div className="carousel-item" key={testimonial.id}>
+                <div className="carousel-item mr-4" key={testimonial.id}>
                   <TestimonialCard
                     key={testimonial.id}
                     testimonial={testimonial}
