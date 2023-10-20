@@ -1,7 +1,7 @@
 "use client";
 import React, { useRef } from "react";
 import BestSellerCard from "./BestSellerCard";
-import HeaderText from "../HeaderText";
+import HeaderText from "../Shared/HeaderText";
 import InfiniteScroll from "react-infinite-scroller";
 
 const BestSeller = [

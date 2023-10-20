@@ -6,10 +6,6 @@ import Posters from "@/components/ListOfPosters/Posters";
 import TestimonialsList from "@/components/Testimonials/TestimonialsList";
 import OurStory from "@/components/OurStory/OurStory";
 
-export const metadata = {
-  title: "TORNITTO'S PIZZA",
-  description: "best pizza in surat",
-};
 
 const HomePage = () => {
   return (

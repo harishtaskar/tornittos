@@ -1,6 +1,6 @@
 import React from "react";
 import TestimonialCard from "./TestimonialCard";
-import HeaderText from "../HeaderText";
+import HeaderText from "../Shared/HeaderText";
 
 const Testimonials = [
   {

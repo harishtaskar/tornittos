@@ -1,12 +1,13 @@
 import React from "react";
 import "../styles/global.css";
 import NavBar from "../components/NavBar/Nav";
-import Provider from "../components/Provider";
+import Provider from "../components/Shared/Provider";
 import Footer from "@/components/Footer/Footer.jsx";
 
 export const metadata = {
-  title: "TORNITTO'S PIZZA",
+  title: { default: "TORNITTO'S PIZZA", template: " %s | TORNITTO'S " },
   description: "the party can't start without pizza",
+  icons: "/assets/images/logo.png",
 };
 
 const RootLayout = ({ children }) => {

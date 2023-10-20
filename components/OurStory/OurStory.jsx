@@ -1,5 +1,5 @@
 import React from "react";
-import HeaderText from "../HeaderText";
+import HeaderText from "../Shared/HeaderText";
 
 const OurStory = () => {
   return (

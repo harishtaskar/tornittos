@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useRef } from "react";
 import OfferCard from "./OfferCard";
-import HeaderText from "../HeaderText";
+import HeaderText from "../Shared/HeaderText";
 
 const Offers = [
   {
