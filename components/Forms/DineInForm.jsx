@@ -8,10 +8,11 @@ import { useSession } from "next-auth/react";
 
 const DineInForm = () => {
   const { data: session } = useSession();
+  console.log(session);
   const [formData, setFormData] = useState({
     firstName: undefined,
     lastName: undefined,
-    email: session?.user.email,
+    email: undefined,
     mobile: undefined,
     date: undefined,
     time: undefined,
@@ -32,6 +33,7 @@ const DineInForm = () => {
     });
   };
   const timeHandler = (data) => {
+    console.log(data);
     setFormData((prev) => {
       return { ...prev, time: `${data?.time} ${data?.arial}` };
     });
@@ -39,7 +41,6 @@ const DineInForm = () => {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    console.log("formData");
     console.log(formData);
   };
 
@@ -65,7 +66,7 @@ const DineInForm = () => {
         name={"email"}
         label={"Email"}
         type={"email"}
-        value={session?.user.email}
+        value={formData.email}
         onChange={onChange}
       />
       <InputText

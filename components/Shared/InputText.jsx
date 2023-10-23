@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 const InputText = ({
   name,
@@ -22,6 +22,7 @@ const InputText = ({
         placeholder={placeholder || ""}
         className="input input-bordered w-full"
         required
+        autoComplete="off"
       />
       {warrning && (
         <label className="label">

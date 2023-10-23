@@ -44,9 +44,9 @@ const Footer = () => {
             <a className="headerTexts">tornittos@pizaa.com</a>
             <a className="headerTexts">support@tornittos.in</a>
           </nav>
-          <nav className="flex flex-col gap-1">
+          <nav className="flex flex-col gap-3">
             <header className="headerTitle">Follow Us</header>
-            <div className="flex flex-row gap-3 justify-between sm:flex-col">
+            <div className="flex flex-row gap-8 xl:gap-5 md:gap-3 lg:gap-3 justify-between sm:flex-col">
               <Link href="/">
                 <FacebookIcon style={{ color: "white" }} />
               </Link>

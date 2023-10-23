@@ -12,6 +12,7 @@ const TextArea = ({ label, type, placeholder, warrning, onChange }) => {
         placeholder={placeholder || ""}
         onChange={onChange}
         className="input input-bordered w-full h-24 p-2 placeholder:text-sm placeholder:font-thin placeholder:text-gray-400"
+        autoComplete="off"
       />
       {warrning && (
         <label className="label">

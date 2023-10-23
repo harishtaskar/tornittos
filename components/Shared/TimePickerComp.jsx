@@ -2,18 +2,18 @@
 import React, { useState } from "react";
 
 const TimePickerComp = ({ time }) => {
-  const [value, setValue] = useState({
+  const [timeArial, setTimeArial] = useState({
     time: undefined,
     arial: "AM",
   });
 
   const onChange = (e) => {
-    const value = e.target.value;
-    const name = e.target.name;
-    setValue((prev) => {
-      return { ...prev, name: value };
+    const { name, value } = e.target;
+    setTimeArial((prev) => {
+      return { ...prev, [name]: value };
     });
-    time(value);
+    console.log(value);
+    time(timeArial);
   };
 
   return (
@@ -24,7 +24,7 @@ const TimePickerComp = ({ time }) => {
       <div className="flex justify-between border border-gray-300 rounded-lg">
         <input
           type="number"
-          value={value.time}
+          value={timeArial.time}
           maxLength="2"
           name="time"
           onChange={onChange}
@@ -33,7 +33,7 @@ const TimePickerComp = ({ time }) => {
         <select
           name="arial"
           id="time"
-          value={value.arial}
+          value={timeArial.arial}
           className="flex-1"
           onChange={onChange}
         >

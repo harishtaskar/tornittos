@@ -3,7 +3,7 @@ import Link from "next/link";
 import React from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 import DineInButton from "./DineInButton";
-import { signIn } from "next-auth/react";
+import SignOutBtn from "../Shared/SignOutBtn";
 
 const NavBar = () => {
   return (
@@ -22,7 +22,7 @@ const NavBar = () => {
                 <Link href="/">Home</Link>
               </li>
               <li>
-                <a>Menu</a>
+                <Link href="/menu"> Menu</Link>
                 <ul className="p-2">
                   <li>
                     <Link href="/">Unlimited Pizza</Link>
@@ -40,6 +40,9 @@ const NavBar = () => {
               </li>
               <li>
                 <Link href="/">About us</Link>
+              </li>
+              <li>
+                <SignOutBtn href="/">Log Out</SignOutBtn>
               </li>
             </ul>
           </div>
@@ -74,13 +77,16 @@ const NavBar = () => {
                 </summary>
                 <ul className="text-background-blue drop-shadow-xl bg-white  z-10 w-96">
                   <li>
-                    <Link href="/">Unlimited Pizza</Link>
+                    <Link href="/menu">Unlimited Pizza</Link>
                   </li>
                   <li>
-                    <Link href="/">Pizza</Link>
+                    <Link href="/menu">Pizza</Link>
                   </li>
                   <li>
-                    <Link href="/">Salad</Link>
+                    <Link href="/menu">Salad</Link>
+                  </li>
+                  <li>
+                    <Link href="/menu">More</Link>
                   </li>
                 </ul>
               </details>
