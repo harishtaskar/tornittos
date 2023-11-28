@@ -1,6 +1,6 @@
 import React from "react";
 
-const TextArea = ({ label, type, placeholder, warrning, onChange }) => {
+const TextArea = ({ label, type, placeholder, warrning, onChange, value }) => {
   return (
     <div className="form-control w-full">
       <label className="label">
@@ -11,6 +11,7 @@ const TextArea = ({ label, type, placeholder, warrning, onChange }) => {
         name="service"
         placeholder={placeholder || ""}
         onChange={onChange}
+        value={value}
         className="input input-bordered w-full h-24 p-2 placeholder:text-sm placeholder:font-thin placeholder:text-gray-400"
         autoComplete="off"
       />

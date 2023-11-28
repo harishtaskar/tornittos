@@ -3,7 +3,7 @@ import React, { useState } from "react";
 
 const TimePickerComp = ({ time }) => {
   const [timeArial, setTimeArial] = useState({
-    time: undefined,
+    time: 12,
     arial: "AM",
   });
 
@@ -12,7 +12,6 @@ const TimePickerComp = ({ time }) => {
     setTimeArial((prev) => {
       return { ...prev, [name]: value };
     });
-    console.log(value);
     time(timeArial);
   };
 

@@ -1,14 +1,22 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import InputText from "../Shared/InputText";
 import DatePicker from "../Shared/DatePicker";
 import TimePickerComp from "../Shared/TimePickerComp";
 import TextArea from "../Shared/TextArea";
 import { useSession } from "next-auth/react";
+import { useRouter } from "next/navigation";
+import { ToastContainer, toast } from "react-toastify";
 
 const DineInForm = () => {
   const { data: session } = useSession();
-  console.log(session);
+  useEffect(() => {
+    if (!session) {
+      router.push("/api/auth/signin");
+    }
+  }, []);
+  const [opacity, setOpacity] = useState(100);
+  const router = useRouter();
   const [formData, setFormData] = useState({
     firstName: undefined,
     lastName: undefined,
@@ -19,46 +27,55 @@ const DineInForm = () => {
     service: undefined,
   });
 
-  const onChange = (e) => {
-    const { name, value } = e.target;
-    console.log(e.target.value);
-    setFormData((prev) => {
-      return { ...prev, [name]: value };
-    });
-  };
-
   const dateHandler = (data) => {
     setFormData((prev) => {
       return { ...prev, date: data };
     });
   };
   const timeHandler = (data) => {
-    console.log(data);
     setFormData((prev) => {
-      return { ...prev, time: `${data?.time} ${data?.arial}` };
+      return { ...prev, time: `${data?.time} ${data?.arial | "AM"}` };
     });
   };
 
   const submitHandler = (e) => {
     e.preventDefault();
-    console.log(formData);
+    setOpacity(30);
+    const form = e.target;
+    const formData = new FormData(form);
+    const formJson = Object.fromEntries(formData.entries());
+    toast.success("🥘 table succefully reserved");
+    setFormData({
+      firstName: "",
+      lastName: "",
+      email: "",
+      mobile: "",
+      date: "",
+      time: "",
+      service: "",
+    });
+    setTimeout(() => {
+      router.push("/");
+      setOpacity(100);
+    }, 5000);
   };
 
   return (
-    <form onSubmit={submitHandler} className="w-full">
+    <form
+      onSubmit={submitHandler}
+      className={`w-full max-w-[60rem] flex md:gap-2 flex-col opacity-${opacity}`}
+    >
       <div className="flex gap-2">
         <InputText
           name={"firstName"}
           label={"First Name"}
           type={"text"}
-          onChange={onChange}
           value={formData.firstName}
         />
         <InputText
           name={"lastName"}
           label={"Last Name"}
           type={"text"}
-          onChange={onChange}
           value={formData.lastName}
         />
       </div>
@@ -67,14 +84,12 @@ const DineInForm = () => {
         label={"Email"}
         type={"email"}
         value={formData.email}
-        onChange={onChange}
       />
       <InputText
         name={"mobile"}
         label={"Mobile"}
         type={"number"}
         value={formData.mobile}
-        onChange={onChange}
       />
       <div className="flex gap-2">
         <DatePicker date={dateHandler} />
@@ -84,7 +99,7 @@ const DineInForm = () => {
         label={"Additional Services?"}
         placeholder={"Birthday/Anniversary Celebration"}
         type={"text"}
-        onChange={onChange}
+        value={formData.service}
       />
       <div className="flex flex-row justify-end w-full mt-4 gap-2">
         <button className="btn btn-outline border-background-blue">
@@ -97,6 +112,7 @@ const DineInForm = () => {
           Submit
         </button>
       </div>
+      <ToastContainer position="top-center" />
     </form>
   );
 };

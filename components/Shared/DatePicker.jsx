@@ -6,7 +6,6 @@ const DatePicker = ({ date }) => {
   const [value, setValue] = useState();
 
   const handleValueChange = (newValue) => {
-    console.log("newValue:", newValue);
     setValue(newValue);
     date(newValue?.startDate);
   };

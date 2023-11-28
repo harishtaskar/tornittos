@@ -68,7 +68,9 @@ const NavBar = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 ">
             <li>
-              <a className=" hover:bg-white  text-xl">Home</a>
+              <Link href="/" className=" hover:bg-white  text-xl">
+                Home
+              </Link>
             </li>
             <li tabIndex={0}>
               <details className="text-xl">
@@ -92,7 +94,9 @@ const NavBar = () => {
               </details>
             </li>
             <li>
-              <a className=" hover:bg-white  text-xl ml-3">About us</a>
+              <Link href="aboutus" className=" hover:bg-white  text-xl ml-3">
+                About us
+              </Link>
             </li>
           </ul>
         </div>

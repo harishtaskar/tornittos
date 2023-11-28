@@ -3,6 +3,7 @@ import "../styles/global.css";
 import NavBar from "../components/NavBar/Nav";
 import Provider from "../components/Shared/Provider";
 import Footer from "@/components/Footer/Footer.jsx";
+import "react-toastify/dist/ReactToastify.css";
 
 export const metadata = {
   title: { default: "TORNITTO'S PIZZA", template: " %s | TORNITTO'S " },

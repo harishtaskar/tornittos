@@ -1,14 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 
-const InputText = ({
-  name,
-  label,
-  type,
-  placeholder,
-  warrning,
-  value,
-  onChange,
-}) => {
+const InputText = ({ name, label, type, placeholder, warrning, value }) => {
   return (
     <div className="form-control w-full">
       <label className="label">
@@ -18,7 +10,6 @@ const InputText = ({
         name={name}
         type={type}
         value={value}
-        onChange={onChange}
         placeholder={placeholder || ""}
         className="input input-bordered w-full"
         required
