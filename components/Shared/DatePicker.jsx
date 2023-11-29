@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import Datepicker from "react-tailwindcss-datepicker";
 
-const DatePicker = ({ date }) => {
+const DatePicker = ({ date, name }) => {
   const [value, setValue] = useState();
 
   const handleValueChange = (newValue) => {
@@ -12,12 +12,14 @@ const DatePicker = ({ date }) => {
   return (
     <div className=" w-full mt-1">
       <label className="label">
-        <span className="label-text">Date</span>
+        <span className="label-text">Reservation Date</span>
       </label>
       <div className="border border-gray-300 rounded-lg">
         <Datepicker
           asSingle={true}
           value={value}
+          useRange={true}
+          name={name}
           onChange={handleValueChange}
         />
       </div>

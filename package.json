@@ -23,7 +23,9 @@
     "react-infinite-scroller": "^1.2.6",
     "react-tailwindcss-datepicker": "^1.6.6",
     "react-time-picker": "^6.5.2",
-    "react-toastify": "^9.1.3"
+    "react-toastify": "^9.1.3",
+    "recoil": "^0.7.7",
+    "sharp": "^0.32.6"
   },
   "devDependencies": {
     "autoprefixer": "^10",

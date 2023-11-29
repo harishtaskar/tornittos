@@ -8,6 +8,10 @@
   font-family: "Gabarito", sans-serif;
 }
 
+input {
+  background-color: whitesmoke;
+}
+
 :root {
   @apply bg-white;
 }
@@ -52,7 +56,6 @@
   top: 0;
   opacity: 0.4;
   filter: invert(1);
-  
 }
 
 .btn_primary {
@@ -94,3 +97,4 @@
 .flex-between {
   @apply flex justify-between items-center;
 }
+

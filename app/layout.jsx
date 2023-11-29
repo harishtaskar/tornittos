@@ -4,6 +4,7 @@ import NavBar from "../components/NavBar/Nav";
 import Provider from "../components/Shared/Provider";
 import Footer from "@/components/Footer/Footer.jsx";
 import "react-toastify/dist/ReactToastify.css";
+import RecoilContextProvider from "../store/index";
 
 export const metadata = {
   title: { default: "TORNITTO'S PIZZA", template: " %s | TORNITTO'S " },
@@ -17,8 +18,10 @@ const RootLayout = ({ children }) => {
       <body>
         <Provider>
           <div>
-            <NavBar />
-            {children}
+            <RecoilContextProvider>
+              <NavBar />
+              {children}
+            </RecoilContextProvider>
             <Footer />
           </div>
         </Provider>

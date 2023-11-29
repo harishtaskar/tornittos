@@ -8,7 +8,7 @@ const TextArea = ({ label, type, placeholder, warrning, onChange, value }) => {
       </label>
       <textarea
         type={type}
-        name="service"
+        name="notes"
         placeholder={placeholder || ""}
         onChange={onChange}
         value={value}

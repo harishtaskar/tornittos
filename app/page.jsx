@@ -7,16 +7,19 @@ import TestimonialsList from "@/components/Testimonials/TestimonialsList";
 import OurStory from "@/components/OurStory/OurStory";
 import { ToastContainer } from "react-toastify";
 
+
 const HomePage = () => {
   return (
     <>
-      <HeroSection />
-      <NewOffersList />
-      {/* <Posters /> */}
-      <BestSellersList />
-      <OurStory />
-      <TestimonialsList />
-      <ToastContainer position="top-center" />
+      
+        <HeroSection />
+        <NewOffersList />
+        {/* <Posters /> */}
+        <BestSellersList />
+        <OurStory />
+        <TestimonialsList />
+        <ToastContainer position="top-center" />
+      
     </>
   );
 };

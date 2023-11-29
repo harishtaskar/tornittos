@@ -1,23 +1,19 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import InputText from "../Shared/InputText";
 import DatePicker from "../Shared/DatePicker";
 import TimePickerComp from "../Shared/TimePickerComp";
 import TextArea from "../Shared/TextArea";
-import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { ToastContainer, toast } from "react-toastify";
+import { useRecoilState } from "recoil";
+import { reservationsListState } from "@/store";
 
 const DineInForm = () => {
-  const { data: session } = useSession();
-  useEffect(() => {
-    if (!session) {
-      router.push("/api/auth/signin");
-    }
-  }, []);
+  const [reservations, setReservations] = useRecoilState(reservationsListState);
   const [opacity, setOpacity] = useState(100);
   const router = useRouter();
-  const [formData, setFormData] = useState({
+  const [inputData, setInputData] = useState({
     firstName: undefined,
     lastName: undefined,
     email: undefined,
@@ -25,16 +21,18 @@ const DineInForm = () => {
     date: undefined,
     time: undefined,
     service: undefined,
+    tableFor: undefined,
+    notes: undefined,
   });
 
   const dateHandler = (data) => {
-    setFormData((prev) => {
+    setInputData((prev) => {
       return { ...prev, date: data };
     });
   };
   const timeHandler = (data) => {
-    setFormData((prev) => {
-      return { ...prev, time: `${data?.time} ${data?.arial | "AM"}` };
+    setInputData((prev) => {
+      return { ...prev, time: `${data?.time}${data?.arial}` };
     });
   };
 
@@ -44,21 +42,30 @@ const DineInForm = () => {
     const form = e.target;
     const formData = new FormData(form);
     const formJson = Object.fromEntries(formData.entries());
+    setInputData((prev) => {
+      return { ...prev, ...formJson };
+    });
+    setReservations((prev) => {
+      return [...prev, { ...formJson, date: inputData.date }];
+    });
     toast.success("🥘 table succefully reserved");
-    setFormData({
+    setInputData({
       firstName: "",
       lastName: "",
       email: "",
       mobile: "",
       date: "",
+      tableFor: "",
       time: "",
-      service: "",
+      notes: "",
     });
     setTimeout(() => {
-      router.push("/");
+      router.push("/reservations");
       setOpacity(100);
     }, 5000);
   };
+
+  console.log(reservations);
 
   return (
     <form
@@ -70,36 +77,47 @@ const DineInForm = () => {
           name={"firstName"}
           label={"First Name"}
           type={"text"}
-          value={formData.firstName}
+          value={inputData.firstName}
         />
         <InputText
           name={"lastName"}
           label={"Last Name"}
           type={"text"}
-          value={formData.lastName}
+          value={inputData.lastName}
         />
       </div>
       <InputText
         name={"email"}
         label={"Email"}
         type={"email"}
-        value={formData.email}
+        value={inputData.email}
       />
       <InputText
         name={"mobile"}
         label={"Mobile"}
         type={"number"}
-        value={formData.mobile}
+        value={inputData.mobile}
       />
       <div className="flex gap-2">
-        <DatePicker date={dateHandler} />
-        <TimePickerComp time={timeHandler} />
+        <DatePicker date={dateHandler} name={"date"} />
+        <TimePickerComp
+          time={timeHandler}
+          name1={"time"}
+          name2={"arial"}
+          value={inputData.time}
+        />
       </div>
+      <InputText
+        name={"tableFor"}
+        label={"How many person will you be with?"}
+        type={"number"}
+        value={inputData.tableFor}
+      />
       <TextArea
-        label={"Additional Services?"}
-        placeholder={"Birthday/Anniversary Celebration"}
+        label={"Notes"}
+        placeholder={""}
         type={"text"}
-        value={formData.service}
+        value={inputData.notes}
       />
       <div className="flex flex-row justify-end w-full mt-4 gap-2">
         <button className="btn btn-outline border-background-blue">

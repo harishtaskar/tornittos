@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 const HeroSection = () => {
   return (
@@ -21,10 +22,12 @@ const HeroSection = () => {
             herbs and basil.
           </p>
           <div className="flex gap-4">
-            <button className="btn btn_primary cursor-pointer">
+            <Link href={"/dinein"} className="btn btn_primary cursor-pointer">
               Reserve table
-            </button>
-            <button className="btn btn_primary cursor-pointer">Menu</button>
+            </Link>
+            <Link href={"/menu"} className="btn btn_primary cursor-pointer">
+              Menu
+            </Link>
           </div>
         </div>
       </div>

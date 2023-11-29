@@ -10,7 +10,11 @@ const SignOutBtn = ({ children }) => {
     signOut();
     router.push("/");
   };
-  return <button onClick={signOutHandler}>{children}</button>;
+  return (
+    <button onClick={signOutHandler} className="text-red-700">
+      {children}
+    </button>
+  );
 };
 
 export default SignOutBtn;
