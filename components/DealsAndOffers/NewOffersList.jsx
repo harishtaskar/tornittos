@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import OfferCard from "./OfferCard";
 import HeaderText from "../Shared/HeaderText";
 
@@ -25,16 +25,11 @@ const Offers = [
 ];
 
 const NewOffersList = () => {
-  const scrollContainerRef = useRef();
-  // const handleScroll = (e) => {
-  //   e.target.scrollLeft += e.target.scrollWidth / Offers.length;
-  // };
-
   return (
     <div className="flex items-center justify-center bg-white mt-5">
       <div className="mainContent pl-5 sm:pl-0 md:pl-0 lg:pl-0 xl:pl-0">
         <HeaderText text="Deals and Offers" />
-        <div className="carousel w-full" ref={scrollContainerRef}>
+        <div className="carousel w-full relative">
           {Offers.map((item, index) => {
             return (
               <div id="item1" className="carousel-item mr-4" key={index}>
@@ -46,6 +41,12 @@ const NewOffersList = () => {
               </div>
             );
           })}
+          <btn className="hidden md:grid absolute btn btn-circle bg-opacity-20 hover:bg-opacity-50 left-0 top-[35%] z-10">
+            ❮
+          </btn>
+          <btn className="hidden md:grid absolute btn btn-circle bg-opacity-20 hover:bg-opacity-50 right-0 top-[35%] z-10">
+            ❯
+          </btn>
         </div>
       </div>
     </div>

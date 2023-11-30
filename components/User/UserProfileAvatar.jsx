@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { signOut } from "next-auth/react";
 import ReservationCount from "../Shared/ReservationCount";
+import SignOutBtn from "../Shared/SignOutBtn";
 
 const UserProfileAvatar = ({ firstLetter, image }) => {
   return (
@@ -35,9 +36,7 @@ const UserProfileAvatar = ({ firstLetter, image }) => {
           <Link href="/">Coupons</Link>
         </li>
         <li>
-          <button className="text-red-700" onClick={() => signOut()}>
-            Logout
-          </button>
+          <SignOutBtn>Logout</SignOutBtn>
         </li>
       </ul>
     </div>

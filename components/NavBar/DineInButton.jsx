@@ -16,8 +16,8 @@ const DineInButton = () => {
     );
   } else {
     return (
-      <Link href={"dinein"} className="btn btn_primary">
-        Dine in
+      <Link href={"/api/auth/signin"} className="btn btn_primary">
+        Sine in
       </Link>
     );
   }

@@ -49,20 +49,20 @@ const DineInForm = () => {
       return [...prev, { ...formJson, date: inputData.date }];
     });
     toast.success("🥘 table succefully reserved");
-    setInputData({
-      firstName: "",
-      lastName: "",
-      email: "",
-      mobile: "",
-      date: "",
-      tableFor: "",
-      time: "",
-      notes: "",
-    });
-    setTimeout(() => {
-      router.push("/reservations");
-      setOpacity(100);
-    }, 5000);
+    // setInputData({
+    //   firstName: "",
+    //   lastName: "",
+    //   email: "",
+    //   mobile: "",
+    //   date: "",
+    //   tableFor: "",
+    //   time: "",
+    //   notes: "",
+    // });
+    // setTimeout(() => {
+    //   router.push("/reservations");
+    //   setOpacity(100);
+    // }, 5000);
   };
 
   console.log(reservations);

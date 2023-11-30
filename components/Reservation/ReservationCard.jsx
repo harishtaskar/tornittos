@@ -3,13 +3,13 @@ import Image from "next/image";
 
 const ReservationCard = ({ item }) => {
   return (
-    <div className="card p-4 rounded-md border border-slate-200 min-w-full md:min-w-[34rem] overflow-hidden">
+    <div className="card p-4 rounded-md border border-slate-200 min-w-full md:min-w-[30rem] overflow-hidden">
       <Image
         src={"/assets/images/logo.png"}
-        width={70}
-        height={70}
+        width={200}
+        height={200}
         alt="TornittosLogo"
-        className="absolute bottom-[-40px] right-[-50px] w-[18rem] h-[18rem] opacity-10 md:opacity-70"
+        className="absolute bottom-[-40px] right-[-50px] w-[18rem] h-[18rem] opacity-10 md:opacity-60"
       />
       <div className="flex justify-between items-center md:px-4">
         <div className="sm:flex text-xl md:text-3xl md:flex lg:flex font-bold flex mt-1 text-background-blue">
